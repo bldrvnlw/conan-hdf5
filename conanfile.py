@@ -31,7 +31,7 @@ class Hdf5Conan(ConanFile):
             tools.download("https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.1/src/CMake-hdf5-1.10.1.zip", filename)
             tools.unzip(filename)
         else: 
-            tools.download("https://support.hdfgroup.org/ftp/HDF5/current/src/%s" % filename, filename)
+            tools.download("https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.1/src/CMake-hdf5-1.10.1.tar.gz", filename)
             tools.untargz(filename)
         os.unlink(filename)
         os.rename ("CMake-hdf5-%s" % self.version_src, "hdf5-%s" % self.version)
