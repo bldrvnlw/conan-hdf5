@@ -1,3 +1,14 @@
+env:
+   global:
+     - CONAN_REFERENCE: "hdf5/1.10.1"
+     - CONAN_USERNAME: "bvanlew"
+     - CONAN_LOGIN_USERNAME: "admin"
+     - CONAN_CHANNEL: "stable"
+     - CONAN_UPLOAD: "http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan-local"
+     - CONAN_STABLE_BRANCH_PATTERN: "release/*"
+     - CONAN_UPLOAD_ONLY_WHEN_STABLE: 1 # Will only upload when the branch matches "release/*"
+#     - CONAN_DOCKER_32_IMAGES: 1
+     
 linux: &linux
    os: linux
    dist: xenial
