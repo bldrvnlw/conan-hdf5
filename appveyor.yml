@@ -3,11 +3,12 @@ build: false
 environment:
     PYTHON_HOME: "C:\\Python37"
 
+    CONAN_REFERENCE: "hdf5/1.10.1"
     CONAN_USERNAME: "bvanlew"
     CONAN_LOGIN_USERNAME: "admin"
     CONAN_CHANNEL: "stable"
     VS150COMNTOOLS: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\Tools\\"
-    CONAN_UPLOAD: "http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan-local"
+    CONAN_UPLOAD: "http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan"
     CONAN_UPLOAD_ONLY_WHEN_STABLE: 0
     matrix:
 #        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
