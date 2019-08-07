@@ -14,7 +14,7 @@ environment:
         secure: g+1lNdgrCLmyKNf3KvbHSln5A1H7BsVhsMsIbwgo+UU=
     CONAN_CHANNEL: "stable"
     VS150COMNTOOLS: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\Tools\\"
-    CONAN_UPLOAD: http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan
+    CONAN_UPLOAD: http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan-local
     CONAN_REMOTE: lkebconan
     CONAN_STABLE_BRANCH_PATTERN: "release/*"
     CONAN_UPLOAD_ONLY_WHEN_STABLE: 1
@@ -42,7 +42,7 @@ install:
   - conan user # It creates the conan data directory
   
 before_build:
-  - conan remote add lkebconan http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan
+  - conan remote add lkebconan http://cytosplore.lumc.nl:8081/artifactory/api/conan/conan-local
 
 test_script:
   - python build.py
